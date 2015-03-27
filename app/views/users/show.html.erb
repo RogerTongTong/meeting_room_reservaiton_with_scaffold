@@ -1,0 +1,18 @@
+<h1>
+  Your reserved meeting rooms
+</h1>
+<%= link_to "back to reservation page", root_path, method: "get" %>
+<table border="1">
+  <tr>
+    <th>Meeting room name</th>
+    <th>reserved time</th>
+  </tr>
+  <% if reservations = generate_reservation_list(@user.reservations) %>
+      <% reservations.each do |reservation| %>
+          <tr>
+            <td><%= reservation[:name] %></td>
+            <td><%= reservation[:time] %></td>
+          </tr>
+      <% end %>
+  <% end %>
+</table>

@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Reservation, type: :model do
   describe "#save_records" do
-    it 'save all of the records into Reservation' do
+    it 'saves all of the records into Reservation' do
       records = ["1,2", "1,3", "2,2"]
       user_id = 1
       reservation = Reservation.new

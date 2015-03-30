@@ -1,6 +1,6 @@
 module RoomsHelper
   def is_booked?(room, time)
-    room.reservations.each do |reservation|
+    room.reservationseach do |reservation|
       if Date.current == reservation.date && reservation.time == time
         return true
       end
